@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  url: 'https://petstore.swagger.io/v2/pet/'
+  api_url: 'https://petstore.swagger.io/v2/pet/'
 };

@@ -1,6 +1,6 @@
-import { ClientesRes } from "../clients/client";
+import {  IAnimal } from "../clients/clients";
 
 export interface appState {
   //! lo vinculamos al client.ts del models
-  clients: ClientesRes
+  clients: IAnimal[]
 }

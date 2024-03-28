@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ClientsService } from 'src/app/clients/services/clients.service';
-import { AnimalFilter } from 'src/app/models/clients/clientFilters';
+import { Store } from '@ngrx/store';
+import { appState } from 'src/app/models/appState/appState';
+import { getClients } from 'src/app/store/actions/clients/clients.actions';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-client-list',
@@ -9,17 +11,17 @@ import { AnimalFilter } from 'src/app/models/clients/clientFilters';
 })
 export class ClientListComponent implements OnInit{
 
-  constructor( private clientsService: ClientsService ){}
+  // ! en vez de llamar al clientsService que tenia antes, ahora Store<AppState> para dejar de
+  // ! llamar servicios en el constructor
+  constructor( private store: Store<appState> ){}
 
   ngOnInit(): void {
     this.GetClients();
   }
 
   GetClients(){
-    this.clientsService.loadClients()
-    .subscribe((res: AnimalFilter) => {
-      console.log(res)
-    })
+    console.log('disparamos la action');
+    this.store.dispatch( getClients({}) );
   }
 
 }
