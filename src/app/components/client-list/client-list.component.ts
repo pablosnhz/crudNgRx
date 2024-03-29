@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
-import { appState } from 'src/app/models/appState/appState';
-import { getClients } from 'src/app/store/actions/clients/clients.actions';
-import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from "@angular/core";
+import { Store } from "@ngrx/store";
+import { appState } from "src/app/models/appState/appState";
+import { getClients } from "src/app/store/actions/clients/clients.actions";
+
 
 @Component({
   selector: 'app-client-list',
