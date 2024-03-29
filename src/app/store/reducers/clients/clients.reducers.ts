@@ -12,10 +12,10 @@ export const clientsReducer = createReducer(
   initialState,
 
   on( getClientsSuccess, ( state, {clients} ) => {
-    console.log(state);
-    console.log(clients);
+    // console.log(state);
+    // console.log(clients);
 
-
+    // mutamos el estado
     state = clients;
     return state
   })

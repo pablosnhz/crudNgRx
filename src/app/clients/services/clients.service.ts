@@ -14,7 +14,7 @@ export class ClientsService {
   constructor( private http: HttpClient ) { }
 
   loadClients( parameters?: AnimalFilter ):Observable<IAnimal>{
-    console.log( 'llega hasta el servicio y retorna los animales' );
+    console.log( 'llega hasta el servicio y retorna los clients' );
 
     return this.http.get<IAnimal>(`${environment.api_url}`)
   }

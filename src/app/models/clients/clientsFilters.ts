@@ -1,18 +1,8 @@
 export interface AnimalFilter {
+  userId: number
   id: number
-  category: Category
-  name: string
-  photoUrls: string[]
-  tags: Tag[]
-  status: string
+  title: string
+  completed: boolean
 }
 
-export interface Category {
-  id: number
-  name: string
-}
 
-export interface Tag {
-  id: number
-  name: string
-}

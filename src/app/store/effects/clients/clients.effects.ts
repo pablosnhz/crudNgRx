@@ -15,7 +15,7 @@ export class ClientsEffects {
       ofType(getClients),
       tap(( params ) => console.log(params)),
       concatMap(( action ) => {
-        // console.log(action);
+            // console.log(action);
         const { parameters } = action;
 
         return this.clientsService.loadClients( parameters )
